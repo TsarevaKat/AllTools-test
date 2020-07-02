@@ -1,0 +1,47 @@
+.section 
+  padding: 0 15px
+  &__title
+    margin-bottom: 30px 
+    font-family: $FontTitle
+    font-size: 32px
+    text-align: center
+    text-transform: uppercase
+    color: $active-color
+  &-table 
+    margin: 0 auto
+    display: inline-block
+    font-family: $Font
+    font-size: 16px
+    line-height: 20px
+    &__wrap
+      display: flex
+      overflow-x: auto
+      max-width: 100vw
+    &__head
+      display: flex
+      color: $bg-color
+      background-color: $color-ligth
+      & > * 
+        padding: 5px 10px
+        border: 1px solid $active-color
+    &__block
+      display: flex
+      color: $color-dark
+      & > * 
+        padding: 5px 10px
+        border: 1px solid $active-color
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+    &__name 
+      width: 200px
+    &__position
+      width: 300px
+    &__time 
+      width: 50px
+      font-size: 12px
+      &.active 
+        background-color: rgba($active-color, 0.7) 
+      &.done
+        background-color: rgba($color-ligth, 0.7) 
+        border-color: $color-ligth
