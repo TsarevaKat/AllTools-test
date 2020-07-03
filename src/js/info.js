@@ -32,7 +32,7 @@ const blockAdd = (namePerson, jobPerson, positionPerson, timeStart, timeFinish) 
 };
 
 const infoAdd = (virtual) => {
-  virtual.map(item => blockAdd(item[0], item[1], item[2], item[3], item[4]));
+  virtual.map(item => blockAdd.apply(this, item));
 };
 
 const addClass = (block, timeStart, timeFinish, classDel, classAdd) => {
